@@ -16,7 +16,7 @@
         <h1>DON’T JUST LEARN <span>AI</span>,<br/>CREATE WITH <span>AI</span></h1>
         <p class="tagline">EDU.AI — The future of AI learning</p>
         <p class="proof">Loved by <strong>50+ AI learners</strong></p>
-        <button class="btn btn-gradient">JOIN OUR WAITLIST TODAY</button>
+        <button class="btn btn-gradient" type="button" data-signup-trigger>JOIN OUR WAITLIST TODAY</button>
       </div>
       <div class="col art reveal">
         <img src="assets/people.png" alt="People collaborating" class="people-img"/>
@@ -54,11 +54,12 @@
     <div class="container column reveal">
       <h2 class="ima">I’m a…</h2>
       <div class="role-buttons">
-        <button class="btn btn-outline">STUDENT</button>
-        <button class="btn btn-outline">EDUCATOR</button>
-        <button class="btn btn-outline">COMPANY</button>
+        <button class="btn btn-outline" type="button" data-role="student">STUDENT</button>
+        <button class="btn btn-outline" type="button" data-role="educator">EDUCATOR</button>
+        <button class="btn btn-outline" type="button" data-role="company">COMPANY</button>
       </div>
-      <button class="btn btn-gradient xl">JOIN OUR WAITLIST TODAY</button>
+
+      <button class="btn btn-gradient xl" type="button" data-signup-trigger>JOIN OUR WAITLIST TODAY</button>
     </div>
   </section>
 
@@ -74,6 +75,39 @@
       <p>© 2025 EDU.AI — The Future of AI Learning</p>
     </div>
   </footer>
+
+  <div class="feature-modal" data-feature-modal hidden>
+    <div class="feature-modal__overlay" data-modal-dismiss></div>
+    <div class="feature-modal__panel" role="dialog" aria-modal="true" aria-labelledby="feature-modal-title" tabindex="-1">
+      <button class="feature-modal__close" type="button" aria-label="Close feature gallery" data-modal-dismiss>×</button>
+      <h3 class="feature-modal__title" id="feature-modal-title">Feature Cards</h3>
+      <div class="feature-carousel" aria-live="polite">
+        <button class="carousel-nav prev" type="button" aria-label="Previous feature card">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <img src="" alt="" class="feature-card" />
+        <button class="carousel-nav next" type="button" aria-label="Next feature card">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+      <p class="carousel-indicator" aria-live="polite">0 / 0</p>
+    </div>
+  </div>
+
+  <div class="signup-modal" data-signup-modal hidden>
+    <div class="signup-modal__overlay" data-signup-dismiss></div>
+    <div class="signup-modal__panel" role="dialog" aria-modal="true" aria-labelledby="signup-modal-title" tabindex="-1">
+      <button class="signup-modal__close" type="button" aria-label="Close waitlist form" data-signup-dismiss>×</button>
+      <h3 class="signup-modal__title" id="signup-modal-title">Join the EDU.AI Waitlist</h3>
+      <p class="signup-modal__subtitle">Drop your email to be the first to know when we launch.</p>
+      <form class="signup-form" novalidate>
+        <label class="signup-form__label" for="waitlist-email">Email</label>
+        <input class="signup-form__input" type="email" id="waitlist-email" name="email" placeholder="you@example.com" required />
+        <p class="signup-form__helper">We’ll keep you posted. No spam, ever.</p>
+        <button class="btn btn-gradient signup-form__submit" type="submit">Request Access</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
