@@ -4,6 +4,8 @@
   --sky:#5bc3f8;
   --soft:#c9e8ff;
   --white:#ffffff;
+  --blush:#f7c2d8;
+  --berry:#6f1d3c;
 }
 
 *{box-sizing:border-box}
@@ -60,6 +62,8 @@ h1 span{ color: var(--sky); }
 .btn{
   border:none; cursor:pointer; font-weight:800; border-radius:999px;
   padding:14px 34px; transition:.25s ease; letter-spacing:.4px;
+  display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none;
 }
 .hero .text .btn{
   display:flex;
@@ -75,6 +79,16 @@ h1 span{ color: var(--sky); }
   color:#07355f; box-shadow:0 12px 28px rgba(91,195,248,.35);
 }
 .btn-gradient:hover{ transform:translateY(-2px); filter:brightness(1.05) }
+.btn-demo{
+  background:linear-gradient(135deg, var(--blush), #f4a7c4);
+  color:var(--berry);
+  box-shadow:0 12px 28px rgba(247,194,216,.35);
+  margin-top:14px;
+}
+.btn-demo:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.05);
+}
 .btn-outline{
   background:transparent; color:var(--ink);
   border:2px solid var(--ink);
